@@ -1,0 +1,12 @@
+42a43
+> static int width=UNDEFINED;
+180a182
+>     width=fb_fixedinfo.line_length/(fb_varinfo_p->bits_per_pixel/8);
+282c284
+<         outbuffer[(i<<2)+Alpha] = srcAlpha >= 0 ? inbuffer[i*4+srcAlpha] : 0xff;
+---
+>         outbuffer[(i<<2)+Alpha] = srcAlpha >= 0 ? inbuffer[i*4+srcAlpha] : 0x00;
+404c406
+<     int vt_num=UNDEFINED, bitdepth=UNDEFINED, height=UNDEFINED, width=UNDEFINED;
+---
+>     int vt_num=UNDEFINED, bitdepth=UNDEFINED, height=UNDEFINED ;
